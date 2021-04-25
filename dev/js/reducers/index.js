@@ -11,6 +11,7 @@ import generated_paragraph from './blog/generated_paragraph';
 import pubHead from './blog/pubHeading';
 import selected_files from './blog/selected_files';
 import imageList from './indabax/imageList';
+import currentImage from './indabax/currentImage';
 
 const allReducers = combineReducers({
     toggleNav: toggleNav,
@@ -23,7 +24,8 @@ const allReducers = combineReducers({
     pubHead: pubHead,
     selected_files: selected_files,
     liveEdit: liveEdit,
-    imageList: imageList
+    imageList: imageList,
+    currentImage: currentImage
 });
 
 export default allReducers;

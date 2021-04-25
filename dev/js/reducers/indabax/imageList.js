@@ -6,8 +6,7 @@ export default (state = null, action) => {
               console.log(action.payload)
               return  Object.assign({}, state, {
                        imageFiles: action.payload
-                   });
-                   break;
+                   });      
      }
 
      return state;

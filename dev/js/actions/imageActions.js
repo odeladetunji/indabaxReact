@@ -7,4 +7,12 @@ export default (param) => {
          payload: param.payload
        }
    }
+
+   if(param.type == 'Current Image'){
+       return {
+         type: 'Current Image',
+         payload: param.payload
+       }
+    }
+
 }

@@ -14,7 +14,7 @@ constructor(props, context) {
    this.handleSelect = this.handleSelect.bind(this);
    this.processImages = this.processImages.bind(this);
    this.handleSelectedUpload = this.handleSelectedUpload.bind(this);
-
+   
    this.state = {
      index: 0,
      direction: null,
@@ -61,8 +61,9 @@ constructor(props, context) {
       this.props.imageActions({
         'type': 'Array of Files',
         'payload': this.state.imageList
-      })
+      });
  }
+
 
  render(){
    return(
