@@ -16,7 +16,7 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
-  
+
   win.loadURL("http://localhost:8080")
 }
 
@@ -34,5 +34,5 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
   }
-})
+});
 

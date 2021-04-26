@@ -27,7 +27,6 @@ constructor(props, context) {
 
    this.handleSelect = this.handleSelect.bind(this);
    this.showNextImage = this.showNextImage.bind(this);
-  //  this.setCurrentImage = this.setCurrentImage.bind(this);
 
  }
 
@@ -38,8 +37,6 @@ constructor(props, context) {
   this.setState({
     imageList: parentState
   })
-
-  // this.setCurrentImage(parentState)
 
   let formData = new FormData();
   formData.set("firstImage", this.props.imageList.imageFiles[this.props.imageList.imageFiles.length - 1].image);
@@ -68,7 +65,6 @@ constructor(props, context) {
     console.log(this.state.currentImage)
   });
 
-  // this.showNextImageOnProp();
  }
 
  updateCurrentProps = (params) => {
@@ -121,7 +117,7 @@ constructor(props, context) {
   .then(response=>{
     console.log(response.data.payload[0])
     let image = response.data.payload[0].nameOfHeatMap.split("/")[1];
-    this.setCurrentImage(image)
+    this.setCurrentImage(image);
     this.updateCurrentProps(response.data.payload[0])
     this.setState({display: "none"})
    }).catch(err=>{ 
