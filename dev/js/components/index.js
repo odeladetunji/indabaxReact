@@ -1,19 +1,30 @@
 import React, {Component} from 'react';
 import {Col, Row, Grid, xs, sm, md} from 'react-bootstrap';
-import Welcome from './welcome';
-import AboutUs from './aboutus';
-import Computations from "./computation";
+import LandingPage from './movies';
+import AboutMovies from './aboutMovie';
+import MainPage from './mainPage';
+import axios from 'axios';
 
 class App extends Component {
-      render(){
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+       movies: []
+    };
+  }
+
+  componentDidMount (){
+ 
+   }
+
+  render(){
         return(
             <div>
-              <Welcome />
-              {/* <AboutUs /> */}
-              {/* <Computations /> */}
+              <MainPage />
             </div>
         );
       }
 }
+
 
 export default App;
