@@ -32,7 +32,7 @@ class MainPage extends Component {
 
      axios({
       method: "GET", 
-      url: "http://127.0.0.1:8025/getmovies",
+      url: "http://127.0.0.1:8040/getmovies",
       headers: { "Content-Type": "application/json" },
      })
      .then(response=>{
@@ -42,6 +42,29 @@ class MainPage extends Component {
       }).catch(err=>{ 
        console.log(err);
       })
+
+      function trigger(){
+        setTimeout(async function(){
+          const response = await fetch("https://stripe.motherhonestly.info/api/wallet?customerId=2027766196", {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          });
+      
+          const responseData = await response.json();
+          console.log(response.status)
+          if (response.status !== 200) {
+            throw new Error(responseData.message);
+          }else {
+            console.log(responseData)
+          }
+        }, 3000)
+        
+      }
+
+      trigger();
+
    }
 
     theFeauturedMovies = () => {

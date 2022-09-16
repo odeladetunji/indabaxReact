@@ -20,7 +20,7 @@ class FeaturedPage extends Component {
   componentDidMount (){
      axios({
       method: "GET", 
-      url: "http://127.0.0.1:8025/getmovies",
+      url: "http://127.0.0.1:8040/getmovies",
       headers: { "Content-Type": "application/json" },
      })
      .then(response=>{

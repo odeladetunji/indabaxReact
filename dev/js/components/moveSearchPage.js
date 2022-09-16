@@ -57,7 +57,7 @@ moveToNextPage = (data) => {
        console.log(response)
        this.setState({movies: response.data})
     //    this.setState({visibility: "visible"})
-       this.displayMovies();
+      //  this.displayMovies();
       }).catch(err=>{ 
        console.log(err);
       })
